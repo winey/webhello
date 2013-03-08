@@ -23,17 +23,17 @@ public class BoardLoginFormServlet extends HttpServlet{
 
         request.setCharacterEncoding("UTF-8");
 
-        String rem = "0";
+        String remember = "0";
         Cookie[] cookies = request.getCookies();
         for (int i =0; i < cookies.length; i++) {
             Cookie cookie = cookies[i];
             if (cookie.getName().equals("remember")) {
-                rem = cookie.getValue();
+                remember = cookie.getValue();
                 break;
             }
         }
 
-        request.setAttribute("rem", rem);
+        request.setAttribute("rem", remember);
 
         //jsp찾아서 이동
         RequestDispatcher view = request.getRequestDispatcher("/board/boardLoginForm.jsp");

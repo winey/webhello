@@ -24,7 +24,12 @@ public class BoardListServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         HttpSession session = request.getSession();
+        if (session.getAttribute("isLogin") == null) {
+            response.sendRedirect("/board/loginform");
+            return;
+        }
 
+        int loginCount = (Integer) request.getServletContext().getAttribute("loginCount");
 
         //1. model에서 데이터 조회
         List<Board> boards = boardRepository.getBoards();
@@ -35,6 +40,7 @@ public class BoardListServlet extends HttpServlet{
 
         //2. request에 데이터 셋팅
         request.setAttribute("boards",boards);
+        request.setAttribute("loginCount",loginCount);
 
         //3. jsp찾아서 이동
         RequestDispatcher view = request.getRequestDispatcher("/board/boardList.jsp");

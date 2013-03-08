@@ -23,17 +23,35 @@ public class BoardLoginServlet extends HttpServlet{
         String id = request.getParameter("id");
         String pw = request.getParameter("pw");
         String remember = request.getParameter("rem");
-        if ( remember == null) {
-            remember = "0";
-        }
 
         HttpSession session = request.getSession();
         session.setAttribute("isLogin", true);
 
-        if ( remember == "1") {
+        //접속자수 추가
+        if (request.getServletContext().getAttribute("loginCount") == null) {
+            request.getServletContext().setAttribute("loginCount", 1);
+        } else {
+            request.getServletContext().setAttribute("loginCount", ((Integer) request.getServletContext().getAttribute("loginCount")) + 1);
+        }
+
+
+        if ( remember != null || remember != "0" ) {
+            // 쿠키생성
             Cookie cookie = new Cookie("remember", remember);
-            cookie.setMaxAge(30*60);
+            cookie.setMaxAge(30*24*60*60);
             response.addCookie(cookie);
+        } else {
+            // 쿠키 삭제
+            Cookie[] cookies = request.getCookies();
+            for (int i =0; i < cookies.length; i++) {
+                Cookie cookie = cookies[i];
+                if (cookie.getName().equals("remember")) {
+                    cookie.setMaxAge(0);
+                    response.addCookie(cookie);
+                    break;
+                }
+            }
+
         }
 
         //list로 이동

@@ -13,7 +13,7 @@
            <td>아이디</td><td><input type="text" name="id" /></td>
        </tr>
        <tr>
-           <td>비번</td><td><input type="pqssword" name="pw" /></td>
+           <td>비번</td><td><input type="password" name="pw" /></td>
        </tr>
        <tr>
            <td>아이디저장</td><td><input type="checkbox" name="rem" value=1 <%

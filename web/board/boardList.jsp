@@ -41,5 +41,8 @@
    </table>
    </div>
    <div><input type="button" value="등록" onclick="goSaveForm()" /></div>
+   <div></div>
+  <div>방문자수 : <%=request.getAttribute("loginCount")%></div>
+   <div><a href="/board/logout">로그아웃</a></div>
   </body>
 </html>
