@@ -35,9 +35,9 @@ public class BoardLoginServlet extends HttpServlet{
         }
 
 
-        if ( remember != null || remember != "0" ) {
+        if ( remember != null && remember != "" ) {
             // 쿠키생성
-            Cookie cookie = new Cookie("remember", remember);
+            Cookie cookie = new Cookie("remember", id);
             cookie.setMaxAge(30*24*60*60);
             response.addCookie(cookie);
         } else {

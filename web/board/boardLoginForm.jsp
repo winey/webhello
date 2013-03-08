@@ -7,17 +7,18 @@
     <title>등록</title>
   </head>
   <body>
+  <% String remember = (String) request.getAttribute("rem"); %>
   <form method=get action="/board/login">
    <table>
        <tr>
-           <td>아이디</td><td><input type="text" name="id" /></td>
+           <td>아이디</td><td><input type="text" name="id" value="<%=request.getAttribute("id")%>" /></td>
        </tr>
        <tr>
            <td>비번</td><td><input type="password" name="pw" /></td>
        </tr>
        <tr>
            <td>아이디저장</td><td><input type="checkbox" name="rem" value=1 <%
-           if (request.getAttribute("rem").equals("1")) {%> checked <% }
+           if ( remember != null && remember !="" ) {%> checked <% }
            %>/></td>
        </tr>
      </table>
