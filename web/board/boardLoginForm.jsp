@@ -2,28 +2,28 @@
 <%@ page import="java.util.List" %>
 <%@ page import="myboard.entity.Board" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
-    <title>등록</title>
+    <title>로그인</title>
   </head>
   <body>
-  <% String remember = (String) request.getAttribute("rem"); %>
   <form method=get action="/board/login">
    <table>
        <tr>
-           <td>아이디</td><td><input type="text" name="id" value="<%=request.getAttribute("id")%>" /></td>
+           <td>아이디</td><td><input type="text" name="id" value="${id}" /></td>
        </tr>
        <tr>
            <td>비번</td><td><input type="password" name="pw" /></td>
        </tr>
        <tr>
-           <td>아이디저장</td><td><input type="checkbox" name="rem" value=1 <%
-           if ( remember != null && remember !="" ) {%> checked <% }
-           %>/></td>
+           <td>아이디저장</td><td><input type="checkbox" name="rem" value=1
+           <c:if test="${rem != null}" > checked </c:if></td>
        </tr>
      </table>
 
    <input type="submit" value="로그인" />
    </form>
+  <%@ include file="/board/boardFooter.jsp"%>
   </body>
 </html>

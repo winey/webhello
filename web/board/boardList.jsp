@@ -2,6 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="myboard.entity.Board" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
     <title>목록</title>
@@ -23,26 +24,23 @@
            <td></td>
            <td></td>
        </tr>
-  <%
 
-      List<Board> boards = (List<Board>) request.getAttribute("boards");
-
-      for (Board board : boards) {
-  %><tr>
-       <td><%=board.getId()%></td>
-       <td><a href="/board/detail?id=<%=board.getId()%>"><%=board.getTitle()%></a></td>
-       <td><%=board.getWriter()%></td>
-       <td><%=board.getPw()%></td>
-       <td><a href="/board/updateform?id=<%=board.getId()%>">수정</a></td>
-       <td><a href="/board/delete?id=<%=board.getId()%>">삭제</a></td>
-   </tr><%
-      }
-  %>
+       <c:forEach var="board" items="${boards}">
+<tr>
+       <td>${board.id}</td>
+       <td><a href="/board/detail?id=${board.id}">${board.title}</a></td>
+       <td>${board.writer}</td>
+       <td>${board.pw}</td>
+       <td><a href="/board/updateform?id=${board.id}">수정</a></td>
+       <td><a href="/board/delete?id=${board.id}">삭제</a></td>
+   </tr>
+       </c:forEach>
    </table>
    </div>
    <div><input type="button" value="등록" onclick="goSaveForm()" /></div>
    <div></div>
-  <div>방문자수 : <%=request.getAttribute("loginCount")%></div>
-   <div><a href="/board/logout">로그아웃</a></div>
+  <div>방문자수 : ${loginCount}</div>
+  <c:if test="${sessionScope.isLogin eq true}"><div><a href="/board/logout">로그아웃</a></div></c:if>
+  <%@ include file="/board/boardFooter.jsp"%>
   </body>
 </html>

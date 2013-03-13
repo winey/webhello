@@ -2,33 +2,31 @@
 <%@ page import="java.util.List" %>
 <%@ page import="myboard.entity.Board" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
     <title>보기</title>
   </head>
   <body>
-  <%
-
-      Board board = (Board) request.getAttribute("board");
-  %>
   <table>
           <tr>
-              <td>id</td><td><%=board.getId()%></td>
+              <td>id</td><td>${board.id}</td>
           </tr>
           <tr>
-              <td>title</td><td><%=board.getTitle()%></td>
+              <td>title</td><td>${board.title}</td>
           </tr>
           <tr>
-              <td>writer</td><td><%=board.getWriter()%></td>
+              <td>writer</td><td>${board.writer}</td>
           </tr>
           <tr>
-              <td>pw</td><td><%=board.getPw()%></td>
+              <td>pw</td><td>${board.pw}</td>
           </tr>
           <tr>
-              <td>content</td><td><textarea name="content"><%=board.getContent()%></textarea> </td>
+              <td>content</td><td><textarea name="content">${board.content}</textarea> </td>
 
           </tr>
       </table>
       <div><a href="/board/list">목록으로</a></div>
+  <%@ include file="/board/boardFooter.jsp"%>
   </body>
 </html>

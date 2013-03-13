@@ -2,6 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="myboard.entity.Board" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
   <head>
     <title>등록</title>
@@ -26,5 +27,6 @@
 
    <input type="submit" value="등록" />
    </form>
+  <%@ include file="/board/boardFooter.jsp"%>
   </body>
 </html>
