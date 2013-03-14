@@ -23,8 +23,6 @@ public class BoardSaveServlet extends HttpServlet{
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        request.setCharacterEncoding("UTF-8");
-
         HttpSession session = request.getSession();
         if (session.getAttribute("isLogin") == null) {
             response.sendRedirect("/board/loginform");
