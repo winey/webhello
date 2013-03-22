@@ -25,7 +25,6 @@ public class RequestWrapper extends HttpServletRequestWrapper {
 
     @Override
     public void setAttribute(String s, Object o) {
-        //To change body of implemented methods use File | Settings | File Templates.
         //System.out.println("set-s = [" + s + "], o = [" + o + "]");
         System.out.println("set [" + s + "] = [" + o + "]");
         super.setAttribute(s,o);

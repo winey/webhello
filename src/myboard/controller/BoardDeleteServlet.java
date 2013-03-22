@@ -2,6 +2,7 @@ package myboard.controller;
 
 import com.sun.corba.se.impl.logging.ORBUtilSystemException;
 import myboard.entity.Board;
+import myboard.repository.BoardDBRepository;
 import myboard.repository.BoardMemoryRepository;
 import myboard.repository.BoardRepository;
 
@@ -20,7 +21,7 @@ import java.util.List;
  */
 public class BoardDeleteServlet extends HttpServlet{
 
-    BoardRepository boardRepository = BoardMemoryRepository.getInstance();
+    BoardRepository boardRepository = BoardDBRepository.getInstance();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

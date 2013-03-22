@@ -1,6 +1,7 @@
 package myboard.controller;
 
 import myboard.entity.Board;
+import myboard.repository.BoardDBRepository;
 import myboard.repository.BoardMemoryRepository;
 import myboard.repository.BoardRepository;
 
@@ -19,7 +20,7 @@ import java.util.List;
  */
 public class BoardListServlet extends HttpServlet{
 
-    BoardRepository boardRepository = BoardMemoryRepository.getInstance();
+    BoardRepository boardRepository = BoardDBRepository.getInstance();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -34,9 +35,10 @@ public class BoardListServlet extends HttpServlet{
         //1. model에서 데이터 조회
         List<Board> boards = boardRepository.getBoards();
 
-        for (Board board : boards) {
-            System.out.println("board = " + board);
-        }
+//
+//        for (Board board : boards) {
+//            System.out.println("board = " + board);
+//        }
 
         //2. request에 데이터 셋팅
         request.setAttribute("boards",boards);
