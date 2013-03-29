@@ -7,6 +7,37 @@
 
 
     <servlet>
+        <servlet-name>adminProductListServlet</servlet-name>
+        <servlet-class>mymall.controller.AdminProductListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminProductListServlet</servlet-name>
+        <url-pattern>/admin/productList</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>productInsertFormServlet</servlet-name>
+        <servlet-class>mymall.controller.ProductInsertFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productInsertFormServlet</servlet-name>
+        <url-pattern>/admin/productInsertForm</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>productSaveServlet</servlet-name>
+        <servlet-class>mymall.controller.ProductSaveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productSaveServlet</servlet-name>
+        <url-pattern>/admin/productSave</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
         <servlet-name>boardListServlet</servlet-name>
         <servlet-class>myboard.controller.BoardListServlet</servlet-class>
     </servlet>
