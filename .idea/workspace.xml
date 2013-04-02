@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5aca23c9-c85f-49f4-893e-901911fc50d9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/controller/ProductInsertFormServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/controller/ProductSaveServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/entity/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/entity/Order.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/entity/Product.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/repository/CustomerRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/repository/OrderRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/repository/ProductDBRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/repository/ProductRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin/productInsertForm.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin/productList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mymall/controller/ProductDeleteServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java" afterPath="$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mymall/repository/ProductDBRepository.java" afterPath="$PROJECT_DIR$/src/mymall/repository/ProductDBRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin/productList.jsp" afterPath="$PROJECT_DIR$/web/admin/productList.jsp" />
     </list>
     <ignored path="webhello.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,24 +65,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProductInsertFormServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mymall/controller/ProductInsertFormServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="55" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProductSaveServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mymall/controller/ProductSaveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="36" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="39" column="50" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,19 +77,56 @@
       <file leaf-file-name="ProductDBRepository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mymall/repository/ProductDBRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="160" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+            <state line="111" column="127" selection-start="3206" selection-end="3206" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#833#842#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productList.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="productList.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/admin/productList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="17" selection-start="1435" selection-end="1435" vertical-scroll-proportion="-11.75">
+            <state line="57" column="90" selection-start="1732" selection-end="1732" vertical-scroll-proportion="1.40625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardDeleteServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/myboard/controller/BoardDeleteServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="51" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardDBRepository.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/myboard/repository/BoardDBRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="133" column="44" selection-start="3822" selection-end="3822" vertical-scroll-proportion="-18.88">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductDeleteServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mymall/controller/ProductDeleteServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="46" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="16344" selection-start="105939" selection-end="105939" vertical-scroll-proportion="-5.4">
               <folding />
             </state>
           </provider>
@@ -120,16 +135,16 @@
       <file leaf-file-name="boardList.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/board/boardList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="12" selection-start="683" selection-end="986" vertical-scroll-proportion="-19.25">
+            <state line="2" column="0" selection-start="72" selection-end="113" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="productInsertForm.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin/productInsertForm.jsp">
+      <file leaf-file-name="AdminProductListServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="54" selection-start="738" selection-end="738" vertical-scroll-proportion="-8.541667">
+            <state line="37" column="0" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,46 +152,19 @@
       </file>
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="90" selection-start="952" selection-end="952" vertical-scroll-proportion="-8.571428">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
             <state />
           </provider>
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardInsertFormServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/myboard/controller/BoardInsertFormServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="59" selection-start="592" selection-end="613" vertical-scroll-proportion="0.0">
+            <state line="43" column="41" selection-start="1581" selection-end="1581" vertical-scroll-proportion="-26.952381">
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mymall/entity/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="162" selection-start="480" selection-end="480" vertical-scroll-proportion="0.32931727">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/myboard/entity/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="26" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -196,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/myboard/controller/BoardUpdateServlet.java" />
         <option value="$PROJECT_DIR$/src/myboard/controller/BoardListServlet.java" />
         <option value="$PROJECT_DIR$/src/myboard/repository/BoardDBRepository.java" />
         <option value="$PROJECT_DIR$/src/mymall/controller/entity/MallProductListServlet.java" />
@@ -204,14 +191,15 @@
         <option value="$PROJECT_DIR$/src/mymall/entity/Order.java" />
         <option value="$PROJECT_DIR$/src/mymall/repository/CustomerRepository.java" />
         <option value="$PROJECT_DIR$/src/mymall/repository/ProductRepository.java" />
-        <option value="$PROJECT_DIR$/src/mymall/repository/ProductDBRepository.java" />
-        <option value="$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/mymall/controller/ProductInsertFormServlet.java" />
         <option value="$PROJECT_DIR$/src/mymall/controller/ProductSaveServlet.java" />
         <option value="$PROJECT_DIR$/web/admin/productInsertForm.jsp" />
-        <option value="$PROJECT_DIR$/web/admin/productList.jsp" />
         <option value="$PROJECT_DIR$/src/mymall/entity/Product.java" />
+        <option value="$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java" />
+        <option value="$PROJECT_DIR$/src/mymall/controller/ProductDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/src/mymall/repository/ProductDBRepository.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/admin/productList.jsp" />
       </list>
     </option>
   </component>
@@ -256,6 +244,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,6 +323,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,29 +608,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="61" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="63" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="63" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="61" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="61" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="64" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="676" />
@@ -642,8 +634,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -688,6 +680,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -714,24 +724,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -957,8 +949,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17044826" sideWeight="0.25641027" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11510792" sideWeight="0.8258547" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1741453" sideWeight="0.49142224" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1599336" sideWeight="0.7254273" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27457264" sideWeight="0.49142224" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1059,134 +1051,131 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mymall/controller/ProductListServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/board/error404.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="219" selection-end="219" vertical-scroll-proportion="0.18131869">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mymall/repository/OrderRepository.java">
+    <entry file="file://$PROJECT_DIR$/web/board/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="215" selection-end="215" vertical-scroll-proportion="0.14835165">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myboard/controller/BoardListServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/board/boardList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="61" selection-start="1090" selection-end="1175" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="72" selection-end="113" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap-responsive.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16608" selection-start="16848" selection-end="16848" vertical-scroll-proportion="0.1875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-18.070312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myboard/controller/BoardSaveServlet.java">
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="46" selection-start="609" selection-end="1376" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="127" selection-start="356" selection-end="356" vertical-scroll-proportion="0.18181819">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="69" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-4.3415008">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/myboard/controller/BoardInsertFormServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="59" selection-start="592" selection-end="613" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="90" selection-start="952" selection-end="952" vertical-scroll-proportion="-8.571428">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/productInsertForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="54" selection-start="738" selection-end="738" vertical-scroll-proportion="-8.541667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mymall/controller/ProductInsertFormServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="55" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mymall/controller/ProductSaveServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="36" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.0">
+        <state line="39" column="50" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16344" selection-start="105939" selection-end="105939" vertical-scroll-proportion="-5.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mymall/controller/AdminProductListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mymall/controller/ProductDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="46" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/board/boardList.jsp">
+    <entry file="file://$PROJECT_DIR$/src/myboard/controller/BoardDeleteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="12" selection-start="683" selection-end="986" vertical-scroll-proportion="-19.25">
+        <state line="35" column="51" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin/productList.jsp">
+    <entry file="file://$PROJECT_DIR$/src/myboard/repository/BoardDBRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="17" selection-start="1435" selection-end="1435" vertical-scroll-proportion="-11.75">
+        <state line="133" column="44" selection-start="3822" selection-end="3822" vertical-scroll-proportion="-18.88">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mymall/repository/ProductDBRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="160" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
+        <state line="111" column="127" selection-start="3206" selection-end="3206" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#833#842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myboard/entity/Board.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="26" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0">
+        <state line="43" column="41" selection-start="1581" selection-end="1581" vertical-scroll-proportion="-26.952381">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mymall/entity/Product.java">
+    <entry file="file://$PROJECT_DIR$/web/admin/productList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="162" selection-start="480" selection-end="480" vertical-scroll-proportion="0.32931727">
+        <state line="57" column="90" selection-start="1732" selection-end="1732" vertical-scroll-proportion="1.40625">
           <folding />
         </state>
       </provider>

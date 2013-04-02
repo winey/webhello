@@ -35,6 +35,14 @@
         <url-pattern>/admin/productSave</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>productDeleteServlet</servlet-name>
+        <servlet-class>mymall.controller.ProductDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productDeleteServlet</servlet-name>
+        <url-pattern>/admin/productDelete</url-pattern>
+    </servlet-mapping>
 
 
     <servlet>

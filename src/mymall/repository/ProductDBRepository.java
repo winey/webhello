@@ -37,12 +37,15 @@ public class ProductDBRepository implements ProductRepository {
             conn = dbConnect();
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
+            System.out.println("rs = " + rs);
             while(rs.next()) {
                 Product product = new Product();
                 product.setProductId(rs.getInt("product_id"));
                 product.setName(rs.getString("name"));
                 product.setPrice(rs.getInt("price"));
                 product.setAmount(rs.getInt("amount"));
+
+                System.out.println("product = " + product.getName());
 
                 products.add(product);
             }
@@ -71,6 +74,8 @@ public class ProductDBRepository implements ProductRepository {
             pstmt.setInt(3, product.getAmount());
             int cnt= pstmt.executeUpdate();
 
+            System.out.println("cnt = " + cnt);
+
         } catch ( SQLException e ) {
            e.printStackTrace();
         } catch ( Exception e ) {
@@ -88,7 +93,23 @@ public class ProductDBRepository implements ProductRepository {
 
     @Override
     public void deleteProduct(int productId) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        String sql = "delete from products where product_id = ?";
+
+        try {
+            conn = dbConnect();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, productId);
+            int cnt= pstmt.executeUpdate();
+
+        } catch ( SQLException e ) {
+            e.printStackTrace();
+        } catch ( Exception e ) {
+            e.printStackTrace();
+        } finally {
+            dbDisconnect(pstmt, conn);
+        }
     }
 
     @Override

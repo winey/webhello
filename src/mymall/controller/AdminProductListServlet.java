@@ -29,6 +29,10 @@ public class AdminProductListServlet extends HttpServlet {
         //1. model에서 데이터 조회
         List<Product> products = productRepository.getProduct();
 
+//        for (Product product : products) {
+//            System.out.println("product = " + product);
+//        }
+
         //2. request에 데이터 셋팅
         request.setAttribute("products",products);
 

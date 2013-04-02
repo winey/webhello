@@ -36,9 +36,10 @@
     </div>
 
     <div class="jumbotron">
-        <a class="btn btn-large btn-success" href="/admin/productInsertForm">상품등록</a>
+        <h2>상품관리</h2>
 
-        <table>
+        <table class="table table-bordered table-striped">
+            <thead>
             <tr>
                 <td>번호</td>
                 <td>상품명</td>
@@ -47,20 +48,25 @@
                 <td></td>
                 <td></td>
             </tr>
-        <c:forEach var="board" items="${boards}">
+            <thead>
+            <tbody>
+        <c:forEach var="product" items="${products}">
             <tr>
-                <td>${product.product_id}</td>
+                <td>${product.productId}</td>
                 <td><a href="">${product.name}</a></td>
                 <td>${product.price}</td>
                 <td>${product.amount}</td>
-                <td><a href="/admin/updateform?id=${product.product_id}">수정</a></td>
-                <td><a href="/admin/delete?id=${product.product_id}">삭제</a></td>
+                <td><a href="/admin/updateform?id=${product.productId}">수정</a></td>
+                <td><a href="/admin/productDelete?id=${product.productId}">삭제</a></td>
             </tr>
-
         </c:forEach>
+            </tbody>
         </table>
     </div>
 
+    <div class="jumbotron">
+        <a class="btn btn-large btn-success" href="/admin/productInsertForm">상품등록</a>
+    </div>
 
     <div class="footer">
         <p>&copy; Company 2013</p>
