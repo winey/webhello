@@ -88,7 +88,29 @@ public class ProductDBRepository implements ProductRepository {
 
     @Override
     public void updateProduct(Product product) {
-        //To change body of implemented methods use File | Settings | File Templates.
+
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        String sql = "update products set name=?, price=?, amount=? where id=?";
+
+        try {
+            conn = dbConnect();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, product.getName());
+            pstmt.setInt(2, product.getPrice());
+            pstmt.setInt(3, product.getAmount());
+            pstmt.setInt(4, product.getProductId());
+
+            int cnt= pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            dbDisconnect(pstmt, conn);
+        }
     }
 
     @Override
