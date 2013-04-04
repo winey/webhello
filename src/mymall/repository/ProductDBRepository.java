@@ -16,6 +16,7 @@ import java.util.List;
 public class ProductDBRepository implements ProductRepository {
 
     private static ProductDBRepository instance = new ProductDBRepository();
+    private final mymall.repository.DBHandle DBHandle = new mymall.repository.DBHandle();
 
     public static ProductDBRepository getInstance() {
         return instance;
@@ -141,52 +142,17 @@ public class ProductDBRepository implements ProductRepository {
 
 
     public Connection dbConnect() {
-        String url = "jdbc:postgresql://localhost:5432/mymall";
-        String usr = "test";
-        String pwd = "1004";
 
-        Connection conn = null;
-
-        try {
-            Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection(url, usr, pwd);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return conn;
+        return DBHandle.dbConnect();
     }
 
     public void dbDisconnect (ResultSet rs, PreparedStatement pstmt, Connection conn) {
 
-        try {
-
-            if(rs != null) { rs.close(); }
-            if(pstmt != null) { pstmt.close(); }
-            if(conn != null) { conn.close(); }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        DBHandle.dbDisconnect(rs, pstmt, conn);
     }
 
     public void dbDisconnect (PreparedStatement pstmt, Connection conn) {
 
-        try {
-
-            if(pstmt != null) { pstmt.close(); }
-            if(conn != null) { conn.close(); }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        DBHandle.dbDisconnect(pstmt, conn);
     }
 }

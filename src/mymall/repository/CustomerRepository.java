@@ -1,5 +1,7 @@
 package mymall.repository;
 
+import mymall.entity.Customer;
+
 /**
  * Created with IntelliJ IDEA.
  * User: winey
@@ -8,5 +10,8 @@ package mymall.repository;
  * To change this template use File | Settings | File Templates.
  */
 public interface CustomerRepository {
+
+    void addCustomer(Customer customer);
+    Customer getCustomerById(String customerId);
 
 }
