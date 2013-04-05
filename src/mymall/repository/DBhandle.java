@@ -2,8 +2,8 @@ package mymall.repository;
 
 import java.sql.*;
 
-public class DBHandle {
-    public DBHandle() {
+public class DBhandle {
+    public DBhandle() {
     }
 
     public Connection dbConnect() {
@@ -54,6 +54,22 @@ public class DBHandle {
             if (pstmt != null) {
                 pstmt.close();
             }
+            if (conn != null) {
+                conn.close();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void dbDisconnect(Connection conn) {
+
+        try {
+
             if (conn != null) {
                 conn.close();
             }

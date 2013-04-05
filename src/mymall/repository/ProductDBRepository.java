@@ -16,7 +16,7 @@ import java.util.List;
 public class ProductDBRepository implements ProductRepository {
 
     private static ProductDBRepository instance = new ProductDBRepository();
-    private final mymall.repository.DBHandle DBHandle = new mymall.repository.DBHandle();
+    private final DBhandle dbHandle = new DBhandle();
 
     public static ProductDBRepository getInstance() {
         return instance;
@@ -31,7 +31,7 @@ public class ProductDBRepository implements ProductRepository {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        String sql = "select product_id, name, price, amount from products";
+        String sql = "select product_id, name, price, amount from products order by product_id desc";
         List<Product> products = new ArrayList<Product>();
 
         try {
@@ -46,7 +46,7 @@ public class ProductDBRepository implements ProductRepository {
                 product.setPrice(rs.getInt("price"));
                 product.setAmount(rs.getInt("amount"));
 
-                System.out.println("product = " + product.getName());
+               // System.out.println("product = " + product.getName());
 
                 products.add(product);
             }
@@ -92,8 +92,7 @@ public class ProductDBRepository implements ProductRepository {
 
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
-        String sql = "update products set name=?, price=?, amount=? where id=?";
+        String sql = "update products set name=?, price=?, amount=? where product_id=?";
 
         try {
             conn = dbConnect();
@@ -111,6 +110,31 @@ public class ProductDBRepository implements ProductRepository {
             e.printStackTrace();
         } finally {
             dbDisconnect(pstmt, conn);
+        }
+    }
+
+    @Override
+    public void updateProduct(Connection conn, Product product) throws SQLException, Exception {
+
+        PreparedStatement pstmt = null;
+        String sql = "update products set amount=? where product_id=?";
+        System.out.println("sql = " + sql);
+
+        try {
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, product.getAmount());
+            pstmt.setInt(2, product.getProductId());
+
+            int cnt= pstmt.executeUpdate();
+            System.out.println("cnt = " + cnt);
+
+        } catch (SQLException e) {
+            throw e;
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            //dbDisconnect(pstmt, conn);
         }
     }
 
@@ -137,22 +161,48 @@ public class ProductDBRepository implements ProductRepository {
 
     @Override
     public Product getProductById(int productId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        String sql = "select product_id, name, price, amount from products where product_id=?";
 
+        Product product = new Product();
+
+        try {
+            conn = dbConnect();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, productId);
+            rs = pstmt.executeQuery();
+            while(rs.next()) {
+                product.setProductId(rs.getInt("product_id"));
+                product.setName(rs.getString("name"));
+                product.setPrice(rs.getInt("price"));
+                product.setAmount(rs.getInt("amount"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            dbDisconnect(rs, pstmt, conn);
+        }
+
+        return product;
+
+    }
 
     public Connection dbConnect() {
 
-        return DBHandle.dbConnect();
+        return dbHandle.dbConnect();
     }
 
     public void dbDisconnect (ResultSet rs, PreparedStatement pstmt, Connection conn) {
 
-        DBHandle.dbDisconnect(rs, pstmt, conn);
+        dbHandle.dbDisconnect(rs, pstmt, conn);
     }
 
     public void dbDisconnect (PreparedStatement pstmt, Connection conn) {
 
-        DBHandle.dbDisconnect(pstmt, conn);
+        dbHandle.dbDisconnect(pstmt, conn);
     }
 }

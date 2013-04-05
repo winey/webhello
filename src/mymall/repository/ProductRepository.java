@@ -2,6 +2,8 @@ package mymall.repository;
 
 import mymall.entity.Product;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -16,6 +18,7 @@ public interface ProductRepository {
     List<Product> getProduct();
     void addProduct(Product product);
     void updateProduct(Product product);
+    void updateProduct(Connection conn, Product product) throws SQLException, Exception;
     void deleteProduct(int productId);
     Product getProductById(int productId);
 }

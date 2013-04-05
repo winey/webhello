@@ -49,51 +49,19 @@
 
     </style>
     <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <script>
-        function checkLoginForm() {
-            f = document.forms[0];
-            if (f.name == null) {
-                return false;
-            }
-            if (f.pw == null) {
-                return false;
-            }
-            f.action = "/login/login"
-            f.submit();
-            return true;
-        }
-        function checkAddForm() {
-            f = document.forms[0];
-            if (f.name == null) {
-                return false;
-            }
-            if (f.pw == null) {
-                return false;
-            }
-            f.action = "/login/add"
-            f.submit();
-            return true;
-        }
-    </script>
 </head>
 
 <body>
 
 <div class="container">
 
-    <form class="form-signin" action="">
+    <form class="form-signin" action="/login/add">
         <h2 class="form-signin-heading">로그인</h2>
-        <input type="text" name="name" class="input-block-level" placeholder="이름">
+        <input type="text" name="id" class="input-block-level" placeholder="아이디">
         <input type="password" name="pw" class="input-block-level" placeholder="비밀번호">
-        <label class="checkbox">
-            <input type="checkbox" name="rem" value="remember-me">저장
-        </label>
-        <button class="btn btn-large btn-primary" type="submit" onclick="return checkLoginForm()">로그인</button>
-        <button class="btn btn-large btn-success" type=submit onclick="return checkAddForm()">가입</button>
+        <button class="btn btn-large btn-primary" >가입</button>
+
     </form>
-
-
-
 
 </div> <!-- /container -->
 

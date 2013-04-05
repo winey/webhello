@@ -56,7 +56,7 @@
                 <td><a href="">${product.name}</a></td>
                 <td>${product.price}</td>
                 <td>${product.amount}</td>
-                <td><a href="/admin/updateform?id=${product.productId}">수정</a></td>
+                <td><a href="/admin/productUpdateForm?id=${product.productId}">수정</a></td>
                 <td><a href="/admin/productDelete?id=${product.productId}">삭제</a></td>
             </tr>
         </c:forEach>

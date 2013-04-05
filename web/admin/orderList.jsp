@@ -27,8 +27,8 @@
             <div class="navbar-inner">
                 <div class="container">
                     <ul class="nav">
-                        <li class="active"><a href="/mymall/list">상품목록</a></li>
-                        <li><a href="/mymall/orderList">나의주문내역</a></li>
+                        <li><a href="/admin/productList">상품관리</a></li>
+                        <li class="active"><a href="/admin/orderList">주문관리</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,33 +36,33 @@
     </div>
 
     <div class="jumbotron">
-        <h2>상품목록</h2>
+        <h2>주문관리</h2>
 
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
                 <td>번호</td>
-                <td>상품명</td>
-                <td>가격</td>
-                <td>재고</td>
-                <td>구매</td>
-
+                <td>상품번호</td>
+                <td>사용자번호</td>
+                <td>주문일시</td>
+                <td></td>
+                <td></td>
             </tr>
             <thead>
             <tbody>
-        <c:forEach var="product" items="${products}">
+        <c:forEach var="order" items="${orders}">
             <tr>
-                <td>${product.productId}</td>
-                <td><a href="">${product.name}</a></td>
-                <td>${product.price}</td>
-                <td>${product.amount}</td>
-                <td><a href="/mymall/orderForm?id=${product.productId}">구매</a></td>
+                <td>${order.orderId}</td>
+                <td><a href="">${order.productId}</a></td>
+                <td>${order.customerId}</td>
+                <td>${order.orderDate} ${order.orderTime}</td>
+                <td><a href="#">수정</a></td>
+                <td><a href="/admin/orderDelete?id=${order.orderId}">삭제</a></td>
             </tr>
         </c:forEach>
             </tbody>
         </table>
     </div>
-
 
     <div class="footer">
         <p>&copy; Company 2013</p>

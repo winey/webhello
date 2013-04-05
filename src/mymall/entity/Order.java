@@ -15,6 +15,8 @@ public class Order {
     private int productId;
     private int customerId;
     private String memo;
+    private String orderDate;
+    private String orderTime;
 
     public int getOrderId() {
         return orderId;
@@ -46,5 +48,21 @@ public class Order {
 
     public void setMemo(String memo) {
         this.memo = memo;
+    }
+
+    public String getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public String getOrderTime() {
+        return orderTime;
+    }
+
+    public void setOrderTime(String orderTime) {
+        this.orderTime = orderTime;
     }
 }

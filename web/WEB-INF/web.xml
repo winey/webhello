@@ -44,6 +44,45 @@
         <url-pattern>/admin/productDelete</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>productUpdateFormServlet</servlet-name>
+        <servlet-class>mymall.controller.ProductUpdateFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productUpdateFormServlet</servlet-name>
+        <url-pattern>/admin/productUpdateForm</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>adminOrderListServlet</servlet-name>
+        <servlet-class>mymall.controller.AdminOrderListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminOrderListServlet</servlet-name>
+        <url-pattern>/admin/orderList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>adminOrderDetailServlet</servlet-name>
+        <servlet-class>mymall.controller.AdminOrderDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adminOrderDetailServlet</servlet-name>
+        <url-pattern>/admin/orderDetail</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>productUpdateServlet</servlet-name>
+        <servlet-class>mymall.controller.ProductUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productUpdateServlet</servlet-name>
+        <url-pattern>/admin/productUpdate</url-pattern>
+    </servlet-mapping>
+
+
 
     <servlet>
         <servlet-name>loginFormServlet</servlet-name>
@@ -64,6 +103,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>loginAddServlet</servlet-name>
+        <servlet-class>mymall.controller.LoginAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginAddServlet</servlet-name>
+        <url-pattern>/login/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>productListServlet</servlet-name>
         <servlet-class>mymall.controller.ProductListServlet</servlet-class>
     </servlet>
@@ -72,7 +120,42 @@
         <url-pattern>/mymall/list</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>orderFromServlet</servlet-name>
+        <servlet-class>mymall.controller.OrderFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orderFromServlet</servlet-name>
+        <url-pattern>/mymall/orderForm</url-pattern>
+    </servlet-mapping>
 
+
+    <servlet>
+        <servlet-name>orderServlet</servlet-name>
+        <servlet-class>mymall.controller.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orderServlet</servlet-name>
+        <url-pattern>/mymall/order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>orderListServlet</servlet-name>
+        <servlet-class>mymall.controller.OrderListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orderListServlet</servlet-name>
+        <url-pattern>/mymall/orderList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>orderDeleteServlet</servlet-name>
+        <servlet-class>mymall.controller.OrderDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>orderDeleteServlet</servlet-name>
+        <url-pattern>/mymall/orderDelete</url-pattern>
+    </servlet-mapping>
 
 
 

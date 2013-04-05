@@ -2,6 +2,9 @@ package mymall.repository;
 
 import mymall.entity.Customer;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: winey
@@ -12,6 +15,8 @@ import mymall.entity.Customer;
 public interface CustomerRepository {
 
     void addCustomer(Customer customer);
-    Customer getCustomerById(String customerId);
+    Customer getCustomerByName(String customerName);
+    void updateCustomer(Customer customer);
+    void updateCustomer(Connection conn, Customer customer) throws SQLException, Exception;
 
 }

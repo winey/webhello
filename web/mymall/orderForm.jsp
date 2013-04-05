@@ -60,8 +60,8 @@
             <div class="navbar-inner">
                 <div class="container">
                     <ul class="nav">
-                        <li class="active"><a href="#">상품관리</a></li>
-                        <li><a href="#">주문관리</a></li>
+                        <li class="active"><a href="/mymall/list">상품목록</a></li>
+                        <li><a href="#">나의주문내역</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,14 +70,18 @@
 
     <div class="jumbotron">
 
-        <form method=post action="/admin/productUpdate" class="form-insert">
-            <h2 class="form-insert-heading">상품등록</h2>
-            번호 <input type="text" name="name" class="input-block-level" placeholder="번호" value="${product.productId}" readonly="true">
-            상품명 <input type="text" name="name" class="input-block-level" placeholder="상품명" value="${product.name}">
-            금액 <input type="text" name="price" class="input-block-level" placeholder="금액" value="${product.price}">
-            수량 <input type="text" name="amount" class="input-block-level" placeholder="수량"value="${product.amount}">
+        <form method=post action="/mymall/order" class="form-insert">
+            <h2 class="form-insert-heading">주문</h2>
+            번호 <input type="text" name="productId" class="input-block-level" placeholder="번호" value="${product.productId}" readonly="true">
+            상품명 <input type="text" name="productName" class="input-block-level" placeholder="상품명" value="${product.name}" readonly="true">
+            금액 <input type="text" name="price" class="input-block-level" placeholder="금액" value="${product.price}" readonly="true">
+            재고<input type="text" name="amount" class="input-block-level" placeholder="재"value="${product.amount}" readonly="true">
 
-            <button class="btn btn-large btn-primary" type="submit">저장</button>
+            현재잔액 <input type="text" name="balance" class="input-block-level" placeholder="잔액"value="${customer.balance}" readonly="true">
+
+            배송정보 <input type="text" name="memo" class="input-block-level" placeholder="배송정보">
+
+            <button class="btn btn-large btn-primary" type="submit">구매</button>
         </form>
 
     </div>

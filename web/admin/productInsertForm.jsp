@@ -75,7 +75,6 @@
             <input type="text" name="name" class="input-block-level" placeholder="상품명">
             <input type="text" name="price" class="input-block-level" placeholder="금액">
             <input type="text" name="amount" class="input-block-level" placeholder="수량">
-
             <button class="btn btn-large btn-primary" type="submit">저장</button>
         </form>
 
