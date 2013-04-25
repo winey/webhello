@@ -23,7 +23,7 @@ import static java.lang.Integer.parseInt;
  * Time: 오후 1:38
  * To change this template use File | Settings | File Templates.
  */
-public class OrderServiceServlet extends HttpServlet {
+public class OrderService extends HttpServlet {
 
     OrderRepository orderRepository = OrderDBRepository.getInstance();
     CustomerRepository customerRepository = CustomerDBRepository.getInstance();
