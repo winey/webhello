@@ -1,4 +1,4 @@
-package hello.spring;
+package mylog;
 
 /**
  * Created with IntelliJ IDEA.

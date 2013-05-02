@@ -1,4 +1,4 @@
-package hello.spring;
+package mylog;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,12 +7,11 @@ package hello.spring;
  * Time: 오후 5:28
  * To change this template use File | Settings | File Templates.
  */
-public class PrettyLog implements Log {
-
+public class DefaultLog implements Log {
+    
     public void write(String s) {
-        System.out.println("************************");
+
         System.out.println("s = " + s);
-        System.out.println("************************");
 
     }
 }
