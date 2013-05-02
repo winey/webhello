@@ -11,7 +11,10 @@ public class Main {
 
     public static void main(String[] args) {
         Client client = new Client();
-        client.biz(new PrettyLog());
+        Log prettyLog = new PrettyLog();
+
+        client.setLog(prettyLog);
+        client.logic();
 
     }
 

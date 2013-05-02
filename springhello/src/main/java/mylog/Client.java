@@ -9,7 +9,12 @@ package mylog;
  */
 public class Client {
 
-    void biz (Log log) {
+    private Log log;
+
+    public void setLog(Log log) {
+        this.log = log;
+    }
+    public void logic() {
         log.write("lalala");
     }
 }
