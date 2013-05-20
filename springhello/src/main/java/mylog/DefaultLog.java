@@ -1,5 +1,7 @@
 package mylog;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created with IntelliJ IDEA.
  * User: winey
@@ -7,6 +9,7 @@ package mylog;
  * Time: 오후 5:28
  * To change this template use File | Settings | File Templates.
  */
+@Component
 public class DefaultLog implements Log {
     
     public void write(String s) {

@@ -1,5 +1,7 @@
 package mylog;
 
+import org.springframework.stereotype.Component;
+
 /**
 * Created with IntelliJ IDEA.
 * User: winey

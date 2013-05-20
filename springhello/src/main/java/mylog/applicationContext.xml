@@ -2,14 +2,17 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool-3.1.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-    <bean name="client" class="mylog.Client">
-        <property name="log" ref="log" />
-    </bean>
-
-    <bean name="log" class="mylog.DefaultLog">
-    </bean>
+    <context:annotation-config />
+    <!--<bean name="client" class="mylog.Client">-->
+    <!--</bean>-->
+    <!--<bean name="log1" class="mylog.DefaultLog">-->
+    <!--</bean>-->
+    <!--<bean name="log2" class="mylog.PrettyLog">-->
+    <!--</bean>-->
+    <context:component-scan base-package="mylog" />
 
 </beans>
