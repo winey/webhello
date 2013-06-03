@@ -15,8 +15,11 @@ public class SpringAnnotationMain {
 
     public static void main(String[] args) {
 
-        ApplicationContext factory = new AnnotationConfigApplicationContext(SpringConfig.class);
-        Client client = (Client)factory.getBean("client");
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        Client client = (Client)context.getBean("client");
+
+        Log log = context.getBean("log", Log.class);
+        System.out.println("log Class Name = " + log.getClass());
 
         client.logic();
     }
